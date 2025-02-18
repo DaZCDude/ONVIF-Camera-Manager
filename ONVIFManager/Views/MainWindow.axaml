@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ONVIFManager.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
+		MinWidth="900"
+		MinHeight="300"
+        x:Class="ONVIFManager.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="ONVIF Manager">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	<Grid Background="#10170f">
+		<Grid x:Name="VideoGrid" Margin="0,0,0,100"/>
+
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="25,0,0,25">
+			<Button Content="Edit Camera List" Click="EditCameraListBtnClick" VerticalContentAlignment="Center"/>
+		</StackPanel>
+		
+		<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,25,25">
+			<Button x:Name="SettingsBtn" Width="40" Margin="0,0,25,0" Cursor="Hand" Click="SettingsBtnClick">
+				<Button.Template>
+					<ControlTemplate>
+						<Image Source="/Assets/Icons/icon_settings.png"/>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+			<Button x:Name="FullscreenBtn" Width="40" Cursor="Hand" Click="FullscreenBtnClick">
+				<Button.Template>
+					<ControlTemplate>
+						<Image Source="/Assets/Icons/icon_fullscreen.png"/>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ONVIFManager.CameraListWindow"
+        Title="CameraListWindow"
+		MinWidth="1000"
+		MinHeight="100"
+		Width="1500">
+	<Grid Background="#10170f">
+		<Border CornerRadius="10" Background="#2e362c" Margin="25,25,25,90">
+			<ListBox x:Name="CameraListBox" Background="Transparent" Foreground="#eff4ee"/>
+		</Border>
+
+		<Button x:Name="CancelBtn" Click="CancelBtnClick" Content="Cancel" Foreground="#eff4ee" Background="#446569" VerticalAlignment="Bottom" Margin="25,0,0,25"/>
+		
+		<StackPanel Orientation="Horizontal" Margin="0,0,25,25" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+			<TextBox x:Name="urlInput" Watermark="Insert URL here" Margin="0,0,25,0" VerticalContentAlignment="Center" MinWidth="200"/>
+			<Button Content="Add Camera" Click="AddCameraBtnClick" Margin="0,0,25,0"/>
+			<Button x:Name="RemoveCameraBtn" Content="Remove Camera" Click="RemoveCameraBtnClick" Margin="0,0,25,0"/>
+			<Button Content="Save" Click="SaveBtnClick"/>
+		</StackPanel>
+	</Grid>
+</Window>

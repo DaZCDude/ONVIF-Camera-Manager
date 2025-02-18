@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install vlc libvlc-dev
+
+then set the program as executable in properties

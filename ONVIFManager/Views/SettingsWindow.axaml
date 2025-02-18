@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="300"
+        x:Class="ONVIFManager.SettingsWindow"
+        Title="Settings"
+		Width="300" MinWidth="300" MaxWidth="300"
+		Height="300" MinHeight="300" MaxHeight="300">
+
+	<Grid Background="#10170f">
+		<StackPanel Margin="25,25,25,0" >
+			<StackPanel Orientation="Horizontal" Width="250">
+				<Label Content="Codec" Foreground="#eff4ee" VerticalAlignment="Center"/>
+				<ComboBox x:Name="codecinput" SelectedIndex="0" MaxDropDownHeight="100" FontSize="10" VerticalAlignment="Center">
+					<ComboBoxItem>Any</ComboBoxItem>
+					<ComboBoxItem>Direct3D11VA</ComboBoxItem>
+					<ComboBoxItem>dxva2</ComboBoxItem>
+					<ComboBoxItem>None</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal">
+				<Label Content="Video Scaling Filter" Foreground="#eff4ee" VerticalAlignment="Center"/>
+				<ComboBox x:Name="swscaleinput" SelectedIndex="0" MaxDropDownHeight="100" FontSize="10" VerticalAlignment="Center">
+					<ComboBoxItem>Fast Bilinear</ComboBoxItem>
+					<ComboBoxItem>Bilinear</ComboBoxItem>
+					<ComboBoxItem>Bicubic</ComboBoxItem>
+					<ComboBoxItem>Experimental</ComboBoxItem>
+					<ComboBoxItem>Nearest Neighbor</ComboBoxItem>
+					<ComboBoxItem>Area</ComboBoxItem>
+					<ComboBoxItem>Luma Bicubic / Chroma Bilinear</ComboBoxItem>
+					<ComboBoxItem>Gauss</ComboBoxItem>
+					<ComboBoxItem>SincR</ComboBoxItem>
+					<ComboBoxItem>Lanczos</ComboBoxItem>
+					<ComboBoxItem>Bicubic Spline</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal">
+				<Label Content="Skip Loop Filter" Foreground="#eff4ee" VerticalAlignment="Center"/>
+				<ComboBox x:Name="skiploopfilterinput" SelectedIndex="4" MaxDropDownHeight="100" FontSize="10" VerticalAlignment="Center">
+					<ComboBoxItem>None</ComboBoxItem>
+					<ComboBoxItem>Non-ref</ComboBoxItem>
+					<ComboBoxItem>Bidir</ComboBoxItem>
+					<ComboBoxItem>Non-key</ComboBoxItem>
+					<ComboBoxItem>All</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal">
+				<Label Content="Audio" Foreground="#eff4ee" VerticalAlignment="Center"/>
+				<CheckBox x:Name="AudioCheckBox"/>
+			</StackPanel>
+		</StackPanel>
+		
+		<Button x:Name="CancelBtn" Content="Cancel" Click="CancelBtnClick" Foreground="#eff4ee" Background="#446569" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25" Width="70" HorizontalContentAlignment="Center"/>
+		<Button x:Name="ApplyBtn" Content="Apply" Click="ApplyBtnClick" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,25" Width="70" HorizontalContentAlignment="Center"/>
+	</Grid>
+</Window>
