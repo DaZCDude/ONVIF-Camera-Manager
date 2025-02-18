@@ -1,6 +1,6 @@
 # Cross Platform ONVIF Camera Manager (Made with Avalonia)
 
-## This program is purely a ONVIF / RTSP Camera Viewer. It cannot modify camera options.
+### This program is purely a ONVIF / RTSP Camera Viewer. It cannot modify camera options.
 
 ## Running on Windows 11 64-Bit:
 ![Windows11Image](/readme-files/windows11_img.png)
