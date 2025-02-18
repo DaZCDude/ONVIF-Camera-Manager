@@ -1,4 +1,4 @@
-# Cross Platform ONVIF Camera Manager (Built with Avalonia)
+# Cross Platform ONVIF Camera Manager (Made with Avalonia)
 
 ## Running on Windows 11 64-Bit:
 ![Windows11Image](/readme-files/windows11_img.png)
